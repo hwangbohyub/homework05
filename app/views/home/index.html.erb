@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>index</title>
+    <meta charset='utf-8'>
+  </head>
+  <body>
+    <!--Nav Bar-->
+    <div class="pos-f-t">
+      <div class="collapse" id="navbarToggleExternalContent">
+        <div class="bg-inverse p-4">
+          <h4 class="text-white">Ruby Gem</h4>
+          <span class="text-muted">멋사 5기 인천대 황보협</span>
+        </div>
+      </div>
+      <nav class="navbar navbar-inverse bg-inverse">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </nav>
+    </div>
+    
+    <!--Info Menu-->
+    <div class="container">
+      <div class="text-center font-weight-bold bg-warning text-white mt-5 p-3">
+        <h1>대학생 우울증 설문조사</h1>
+      </div>
+      
+      <div class="bg-faded p-3">
+        <p class="font-weight-bold">답변에 관한 요령: 아래에 있는 항목들은 <span style="font-size:1.3em" class="text-warning">지난 일주일 동안</span>의 귀하의 상태에 대한 질문입니다.</p>
+        <p>그와 같은 일에 대해 아래의 <span class="font-weight-bold text-warning">1 - 2 - 3 - 4</span> 로 답해 주십시요.</p>
+        <div class="mt-2">
+          <p>1. 극히 드물다. (일주일 동안 1일 이하)</p>
+          <p>2. 가끔 있었다. (일주일 동안 1일에서 2일간)</p>
+          <p>3. 종종 있었다. (일주일 동안 3일에서 4일간)</p>
+          <p>4. 대부분 그랬다. (일주일 동안 5일 이상)</p>
+        </div>
+      </div>
+    </div>
+    
+    <!--Check Menu-->
+    <div class="container mt-5 mb-5">
+      <div>
+        <form action="/home/result" method="post">
+          
+          <!--Check-->
+          <div>
+            
+            <div class="container bg-warning p-3">
+              <div class="row mt-1">
+                <div class="col-4 offset-2">
+                  <p class="text-white font-weight-bold">※ 이름을 입력하세요(영어로 입력하세요)</p>
+                </div>
+                <div class="col-4">
+                  <input class="form-control" type="text" name="name" id="example-text-input">
+                </div>
+              </div>
+              
+              <div class="row mt-1">
+                <div class="col-4 offset-2">
+                  <p class="text-white font-weight-bold">※ 생년월일을 입력하세요</p>
+                </div>
+                <div class="col-4">
+                  <input class="form-control" type="date" name="date" id="example-date-input">
+                </div>
+              </div>
+              
+              <div class="row mt-1">
+                <div class="col-4 offset-2">
+                  <p class="text-white font-weight-bold">※ 성별을 선택하세요</p>
+                </div>
+                <div class="col-4">
+                  <select class="form-control" name="gender" id="exampleSelect1">
+                    <option value="MAN">남자</option>
+                    <option value="WOMAN">여자</option>
+                </select>
+                </div>
+              </div>
+            </div>
+            
+            
+            <div class="row mt-5">
+              <div class="col-8">
+                <p>1. 평소에는 아무렇지도 않던 일들이 괴롭고 귀찮게 느껴졌다.</p>
+              </div>
+              <div class="col-4">
+                1 <input class="mr-4" type="radio" name="c01" value="1" >
+                2 <input class="mr-4" type="radio" name="c01" value="2" >
+                3 <input class="mr-4" type="radio" name="c01" value="3" >
+                4 <input class="mr-4" type="radio" name="c01" value="4" >
+              </div>
+            </div>
+            
+            <div class="row  mt-1">
+              <div class="col-8">
+                <p>2. 먹고 싶지 않고, 식욕이 없었다.</p>
+              </div>
+              <div class="col-4">
+                1 <input class="mr-4" type="radio" name="c02" value="1" >
+                2 <input class="mr-4" type="radio" name="c02" value="2" >
+                3 <input class="mr-4" type="radio" name="c02" value="3" >
+                4 <input class="mr-4" type="radio" name="c02" value="4" >
+              </div>
+            </div>
+            
+            <div class="row  mt-1">
+              <div class="col-8">
+                <p>3. 어느 누가 도와준다 하더라도, 나의 울적한 기분을 떨쳐 버릴 수 없을 것 같았다.</p>
+              </div>
+              <div class="col-4">
+                1 <input class="mr-4" type="radio" name="c03" value="1" >
+                2 <input class="mr-4" type="radio" name="c03" value="2" >
+                3 <input class="mr-4" type="radio" name="c03" value="3" >
+                4 <input class="mr-4" type="radio" name="c03" value="4" >
+              </div>
+            </div>
+            
+            <div class="row  mt-1">
+              <div class="col-8">
+                <p>4. 무슨 일을 하든 정신을 집중하기가 힘들었다.</p>
+              </div>
+              <div class="col-4">
+                1 <input class="mr-4" type="radio" name="c04" value="1" >
+                2 <input class="mr-4" type="radio" name="c04" value="2" >
+                3 <input class="mr-4" type="radio" name="c04" value="3" >
+                4 <input class="mr-4" type="radio" name="c04" value="4" >
+              </div>
+            </div>
+            
+            <div class="row  mt-1">
+              <div class="col-8">
+                <p>5. 비교적 잘 지냈다.</p>
+              </div>
+              <div class="col-4">
+                1 <input class="mr-4" type="radio" name="c05" value="1" >
+                2 <input class="mr-4" type="radio" name="c05" value="2" >
+                3 <input class="mr-4" type="radio" name="c05" value="3" >
+                4 <input class="mr-4" type="radio" name="c05" value="4" >
+              </div>
+            </div>
+            
+            <div class="row  mt-1">
+              <div class="col-8">
+                <p>6. 상당히 우울했다.</p>
+              </div>
+              <div class="col-4">
+                1 <input class="mr-4" type="radio" name="c06" value="1" >
+                2 <input class="mr-4" type="radio" name="c06" value="2" >
+                3 <input class="mr-4" type="radio" name="c06" value="3" >
+                4 <input class="mr-4" type="radio" name="c06" value="4" >
+              </div>
+            </div>
+            
+            <div class="row  mt-1">
+              <div class="col-8">
+                <p>7. 모든 일들이 힘들게 느껴졌다.</p>
+              </div>
+              <div class="col-4">
+                1 <input class="mr-4" type="radio" name="c07" value="1" >
+                2 <input class="mr-4" type="radio" name="c07" value="2" >
+                3 <input class="mr-4" type="radio" name="c07" value="3" >
+                4 <input class="mr-4" type="radio" name="c07" value="4" >
+              </div>
+            </div>
+            
+            <div class="row  mt-1">
+              <div class="col-8">
+                <p>8. 앞일이 암담하게 느껴졌다.</p>
+              </div>
+              <div class="col-4">
+                1 <input class="mr-4" type="radio" name="c08" value="1" >
+                2 <input class="mr-4" type="radio" name="c08" value="2" >
+                3 <input class="mr-4" type="radio" name="c08" value="3" >
+                4 <input class="mr-4" type="radio" name="c08" value="4" >
+              </div>
+            </div>
+            
+            <div class="row  mt-1">
+              <div class="col-8">
+                <p>9. 지금까지의 내 인생은 실패작이라는 생각이 들었다.</p>
+              </div>
+              <div class="col-4">
+                1 <input class="mr-4" type="radio" name="c09" value="1" >
+                2 <input class="mr-4" type="radio" name="c09" value="2" >
+                3 <input class="mr-4" type="radio" name="c09" value="3" >
+                4 <input class="mr-4" type="radio" name="c09" value="4" >
+              </div>
+            </div>
+            
+            <div class="row  mt-1">
+              <div class="col-8">
+                <p>10. 적어도 보통 사람들만큼의 능력은 있었다고 생각한다.</p>
+              </div>
+              <div class="col-4">
+                1 <input class="mr-4" type="radio" name="c10" value="1" >
+                2 <input class="mr-4" type="radio" name="c10" value="2" >
+                3 <input class="mr-4" type="radio" name="c10" value="3" >
+                4 <input class="mr-4" type="radio" name="c10" value="4" >
+              </div>
+            </div>
+            
+            
+            <!---->
+            <div class="row mt-1">
+              <div class="col-8">
+                <p>11. 잠을 설쳤다 (잠을 잘 이루지 못 했다).</p>
+              </div>
+              <div class="col-4">
+                1 <input class="mr-4" type="radio" name="c11" value="1" >
+                2 <input class="mr-4" type="radio" name="c11" value="2" >
+                3 <input class="mr-4" type="radio" name="c11" value="3" >
+                4 <input class="mr-4" type="radio" name="c11" value="4" >
+              </div>
+            </div>
+            
+            <div class="row  mt-1">
+              <div class="col-8">
+                <p>12. 두려움을 느꼈다.</p>
+              </div>
+              <div class="col-4">
+                1 <input class="mr-4" type="radio" name="c12" value="1" >
+                2 <input class="mr-4" type="radio" name="c12" value="2" >
+                3 <input class="mr-4" type="radio" name="c12" value="3" >
+                4 <input class="mr-4" type="radio" name="c12" value="4" >
+              </div>
+            </div>
+            
+            <div class="row  mt-1">
+              <div class="col-8">
+                <p>13. 평소에 비해 말수가 적었다.</p>
+              </div>
+              <div class="col-4">
+                1 <input class="mr-4" type="radio" name="c13" value="1" >
+                2 <input class="mr-4" type="radio" name="c13" value="2" >
+                3 <input class="mr-4" type="radio" name="c13" value="3" >
+                4 <input class="mr-4" type="radio" name="c13" value="4" >
+              </div>
+            </div>
+            
+            <div class="row  mt-1">
+              <div class="col-8">
+                <p>14. 세상에 홀로 있는 듯한 외로움을 느꼈다.</p>
+              </div>
+              <div class="col-4">
+                1 <input class="mr-4" type="radio" name="c14" value="1" >
+                2 <input class="mr-4" type="radio" name="c14" value="2" >
+                3 <input class="mr-4" type="radio" name="c14" value="3" >
+                4 <input class="mr-4" type="radio" name="c14" value="4" >
+              </div>
+            </div>
+            
+            <div class="row  mt-1">
+              <div class="col-8">
+                <p>15. 큰 불만 없이 생활했다.</p>
+              </div>
+              <div class="col-4">
+                1 <input class="mr-4" type="radio" name="c15" value="1" >
+                2 <input class="mr-4" type="radio" name="c15" value="2" >
+                3 <input class="mr-4" type="radio" name="c15" value="3" >
+                4 <input class="mr-4" type="radio" name="c15" value="4" >
+              </div>
+            </div>
+            
+            <div class="row  mt-1">
+              <div class="col-8">
+                <p>16. 사람들이 나에게 차갑게 대하는 것 같았다.</p>
+              </div>
+              <div class="col-4">
+                1 <input class="mr-4" type="radio" name="c16" value="1" >
+                2 <input class="mr-4" type="radio" name="c16" value="2" >
+                3 <input class="mr-4" type="radio" name="c16" value="3" >
+                4 <input class="mr-4" type="radio" name="c16" value="4" >
+              </div>
+            </div>
+            
+            <div class="row  mt-1">
+              <div class="col-8">
+                <p>17. 갑자기 울음이 나왔다.</p>
+              </div>
+              <div class="col-4">
+                1 <input class="mr-4" type="radio" name="c17" value="1" >
+                2 <input class="mr-4" type="radio" name="c17" value="2" >
+                3 <input class="mr-4" type="radio" name="c17" value="3" >
+                4 <input class="mr-4" type="radio" name="c17" value="4" >
+              </div>
+            </div>
+            
+            <div class="row  mt-1">
+              <div class="col-8">
+                <p>18. 마음이 슬펐다.</p>
+              </div>
+              <div class="col-4">
+                1 <input class="mr-4" type="radio" name="c18" value="1" >
+                2 <input class="mr-4" type="radio" name="c18" value="2" >
+                3 <input class="mr-4" type="radio" name="c18" value="3" >
+                4 <input class="mr-4" type="radio" name="c18" value="4" >
+              </div>
+            </div>
+            
+            <div class="row  mt-1">
+              <div class="col-8">
+                <p>19. 사람들이 나를 싫어하는 것 같았다.</p>
+              </div>
+              <div class="col-4">
+                1 <input class="mr-4" type="radio" name="c19" value="1" >
+                2 <input class="mr-4" type="radio" name="c19" value="2" >
+                3 <input class="mr-4" type="radio" name="c19" value="3" >
+                4 <input class="mr-4" type="radio" name="c19" value="4" >
+              </div>
+            </div>
+            
+            <div class="row  mt-1">
+              <div class="col-8">
+                <p>20. 도무지 뭘 해 나갈 엄두가 나지 않았다.</p>
+              </div>
+              <div class="col-4">
+                1 <input class="mr-4" type="radio" name="c20" value="1" >
+                2 <input class="mr-4" type="radio" name="c20" value="2" >
+                3 <input class="mr-4" type="radio" name="c20" value="3" >
+                4 <input class="mr-4" type="radio" name="c20" value="4" >
+              </div>
+            </div>
+            
+            <div class="row mt-1 d-flex justify-content-center">
+              <button type="submit" class="btn btn-warning">제출하기</button>
+            </div>
+            
+            
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

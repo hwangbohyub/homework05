@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>result</title>
+    <meta charset='utf-8'>
+  </head>
+  <body class="bg-inverse text-white">
+    <!--Nav Bar-->
+    <div class="pos-f-t">
+      <div class="collapse" id="navbarToggleExternalContent">
+        <div class="bg-inverse p-4">
+          <h4 class="text-white">Ruby Gem</h4>
+          <span class="text-muted">멋사 5기 인천대 황보협</span>
+        </div>
+      </div>
+      <nav class="navbar navbar-inverse bg-inverse">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </nav>
+    </div>
+    
+    <div class="container mt-5 mb-5">
+      
+      <div class="d-flex justify-content-end">
+          <a href="/home/index" class="text-warning">돌아가기</a>
+        </div>
+      
+        <h1 class="text-center font-weight-bold">멋쟁이 사자처럼</h1>
+        <div class="bg-faded">
+          <pre class="d-flex justify-content-center"><%=@likelion%></pre>
+        </div>
+        
+        <h3 class="text-center font-weight-bold">이름</h3>
+        <div class="bg-faded">
+          <pre class="d-flex justify-content-center"><%=@name%></pre>
+        </div>
+        
+        <h3 class="text-center font-weight-bold">생년월일</h3>
+        <div class="bg-faded">
+          <pre class="d-flex justify-content-center"><%=@date%></pre>
+        </div>
+        
+        <h3 class="text-center font-weight-bold">성별</h3>
+        <div class="bg-faded">
+          <pre class="d-flex justify-content-center"><%=@gender%></pre>
+        </div>
+        
+        <h3 class="text-center font-weight-bold">결과</h3>
+        <div class="bg-faded">
+          <pre class="d-flex justify-content-center"><%=@result%></pre>
+        </div>
+        
+        
+    </div>
+    
+  </body>
+</html>
